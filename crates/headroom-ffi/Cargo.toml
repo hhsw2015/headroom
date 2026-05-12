@@ -1,0 +1,21 @@
+[package]
+name = "headroom-ffi"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "C FFI bindings for headroom-core compression"
+
+[dependencies]
+headroom-core = { path = "../headroom-core", features = ["redis"] }
+serde = { workspace = true }
+serde_json = { workspace = true, features = ["arbitrary_precision", "raw_value"] }
+thiserror.workspace = true
+
+# build-dependencies
+# cbindgen = "0.27"  # install separately: cargo install cbindgen
+
+[lib]
+name = "headroom_ffi"
+crate-type = ["cdylib"]

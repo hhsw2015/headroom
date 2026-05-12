@@ -1844,6 +1844,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "headroom-ffi"
+version = "0.1.0"
+dependencies = [
+ "headroom-core",
+ "serde",
+ "serde_json",
+ "thiserror 1.0.69",
+]
+
+[[package]]
 name = "headroom-parity"
 version = "0.1.0"
 dependencies = [
